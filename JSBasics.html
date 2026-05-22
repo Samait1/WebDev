@@ -44,9 +44,43 @@
         <tr>
             <td>
                 <button type="button" onclick="alert('User:Alice')">View</button>
+
+                <button type="button" onclick="return confirm('Are you sure you want to delete User:Alice?')">Delete</button>
             </td>
         </tr>
     </table>
+
+<script>
+    var userName = "Anna Smith";//variable declaration and initialization
+    let userAge = 28;//variable declaration and initialization
+    document.write("<br>Her name is " + userName + "and she is " + userAge + " years old");
+
+    var score = 85;
+    score += 10;//score is now 95
+    document.write("<br>New Score: "+ score);
+
+    const num1 = 5;
+    const num2 = 10;
+    const sum = num1 + num2;
+    document.write("<br>Sum: " + sum);
+
+    const age = 20;
+    //age += 5; This will cause an error because of const
+    document.write("<br>New Age: " + age);
+
+    var fname = prompt("Enter your full name:");
+    document.write("<br>Hello : " + fname);
+
+
+    var fruits = ["Apple" , "Banana" , "Cherry"];
+    
+</script>  
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 </body>   
 </html>
