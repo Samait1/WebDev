@@ -197,7 +197,79 @@ document.write("<br>Secretary's Bio: " + userDetails.SecretaryBio());
 
 <br>
 <br>
+<script>
+    // Loops
+    // while loop
+    document.write("<h4>While Loop:</h4>");
+    var i = 8; // initialization
+    while (i <= 15) { // condition
+        document.write(i + "<br>"); // code to be executed
+        i+=2; // increment by 2
+    }
+    // do-while loop
+    document.write("<h4>Do-While Loop:</h4>");
+    var j = 10; // initialization
+    do {
+        document.write(j + "<br>"); // code to be executed
+        j+=2; // increment by 2
+    } while (j <= 20); // condition
+    // for loop
+    document.write("<h4>For Loop:</h4>");
+    for (var k = 1; k <= 10; k++) { // initialization; condition; increment
+        document.write(k + "<br>"); // code to be executed
+    }
+    // for-of loop (for iterating over arrays)
+    document.write("<h4>For-Of Loop:</h4>");
+    var colors = ["Red", "Green", "Blue", "Yellow"];
+    for (var color of colors) {
+        document.write(color + "<br>"); // code to be executed
+    }
+    // for-in loop (for iterating over object properties)
+    document.write("<h4>For-In Loop:</h4>");
+    var car = {
+        make: "Toyota",
+        model: "Camry",
+        year: 2020
+    };
+    for (var carDetail in car) {
+        document.write(carDetail + ": " + car[carDetail] + "<br>"); // code to be executed
+    }
+        var TimeDate = new Date();
+</script>
 <br>
+<h4>Select registration date</h4>
+
+<select>
+    <script>
+        document.write('<option value="' + TimeDate.getDate() + '">' + TimeDate.getDate() + '</option>');
+        for (var day = 1; day <= getDaysInMonth(TimeDate); day++) {
+            if(day === TimeDate.getDate()) continue; // Skip the current day since it's already added as the default option
+            document.write('<option value="' + day + '">' + day + '</option>');
+        }
+    </script>
+</select>
+<select>
+    <script>
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        document.write('<option value="' + TimeDate.getMonth() + '">' + months[TimeDate.getMonth()] + '</option>');
+        for (var month of months) {
+            if(month === months[TimeDate.getMonth()]) continue; // Skip the current month since it's already added as the default option
+            document.write('<option value="' + month + '">' + month + '</option>');
+        }
+    </script>
+</select>
+<select>
+    <script>
+        var currentYear = TimeDate.getFullYear();
+        document.write('<option value="' + currentYear + '">' + currentYear + '</option>');
+        var minYear = currentYear - 30; // Set a minimum year (e.g., 30 years ago)
+        for (var year = currentYear; year >= minYear; year--) {
+            if(year === currentYear) continue; // Skip the current year since it's already added as the default option
+            document.write('<option value="' + year + '">' + year + '</option>');
+        }
+    </script>
+</select>
+
 <br>
 <br>
 
